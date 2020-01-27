@@ -46,10 +46,10 @@ public class Demo {
     String productList = null;
     switch (choice) {
       case FEDEX:
-        productList = fedex.outputProducts();
+        productList = fedex.outPutProducts();
         break;
       case UPS:
-        productList = ups.outputProducts();
+        productList = ups.outPutProducts();
         break;
       default:
         throw new AssertionError();

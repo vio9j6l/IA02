@@ -1,16 +1,16 @@
 public class UnitedParcelService implements IShipper {
 
-  Product prod1 = null;
-  Product prod2 = null;
-  Product prod3 = null;
-  Product prod4 = null;
+  Product product1 = null;
+  Product product2 = null;
+  Product product3 = null;
+  Product product4 = null;
 
   @Override
   public void addProducts(Shipment shipment) {
-    prod1 = shipment.getProducts().get(0);
-    prod2 = shipment.getProducts().get(1);
-    prod3 = shipment.getProducts().get(2);
-    prod4 = shipment.getProducts().get(3);
+    product1 = shipment.getProducts().get(0);
+    product2 = shipment.getProducts().get(1);
+    product3 = shipment.getProducts().get(2);
+    product4 = shipment.getProducts().get(3);
   }
 
   @Override
@@ -19,12 +19,12 @@ public class UnitedParcelService implements IShipper {
   }
 
   @Override
-  public String outputProducts() {
+  public String outPutProducts() {
     String listOfItems = "";
-    listOfItems = listOfItems + prod1.getDescription() + " [" + prod1.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + prod2.getDescription() + " [" + prod2.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + prod3.getDescription() + " [" + prod3.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + prod4.getDescription() + " [" + prod4.getQty() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product1.getDescription() + " [" + product1.getQty() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product2.getDescription() + " [" + product2.getQty() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product3.getDescription() + " [" + product3.getQty() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product4.getDescription() + " [" + product4.getQty() + "]" + System.lineSeparator();
 
     return listOfItems;
   }

@@ -20,7 +20,7 @@ public class FederalExpress implements IShipper {
   }
 
   @Override
-  public String outputProducts() {
+  public String outPutProducts() {
     StringBuilder sbReport = new StringBuilder();
     for (Product item : items) {
       sbReport.append(item.getQty());
