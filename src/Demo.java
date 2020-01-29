@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
-enum ShipmentType {
+enum ShipmentType
+{
   FEDEX,
   UPS
 }
 
-public class Demo {
+public class Demo
+{
 
   Scanner keyboard = new Scanner(System.in);
   Shipment shipment = new Shipment();

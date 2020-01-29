@@ -1,6 +1,7 @@
 import java.util.Stack;
 
-public class FederalExpress implements IShipper {
+public class FederalExpress implements IShipper
+{
 
   private static final String NAME = "Federal Express";
   Stack<Product> items = new Stack<>();
@@ -21,16 +22,16 @@ public class FederalExpress implements IShipper {
 
   @Override
   public String outPutProducts() {
-    StringBuilder sbReport = new StringBuilder();
+    StringBuilder stringBuilderReport = new StringBuilder();
     for (Product item : items) {
-      sbReport.append(item.getQuantity());
-      sbReport.append(" " + item.getDescription());
-      sbReport.append(" (" + item.getWeightOunces() + " oz)");
-      sbReport.append(System.lineSeparator());
+      stringBuilderReport.append(item.getQuantity());
+      stringBuilderReport.append(" " + item.getDescription());
+      stringBuilderReport.append(" (" + item.getWeightOunces() + " oz)");
+      stringBuilderReport.append(System.lineSeparator());
     }
 
-    sbReport.append("Total number of items: " + totalQuantity);
-    sbReport.append(System.lineSeparator());
-    return sbReport.toString();
+    stringBuilderReport.append("Total number of items: " + totalQuantity);
+    stringBuilderReport.append(System.lineSeparator());
+    return stringBuilderReport.toString();
   }
 }

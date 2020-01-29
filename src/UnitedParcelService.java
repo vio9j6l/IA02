@@ -1,4 +1,5 @@
-public class UnitedParcelService implements IShipper {
+public class UnitedParcelService implements IShipper
+{
 
   Product product1 = null;
   Product product2 = null;

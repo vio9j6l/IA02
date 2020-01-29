@@ -1,4 +1,5 @@
-public class Product {
+public class Product
+{
   private String id = null;
   private int quantity = 0;
   private String description = null;
