@@ -21,10 +21,10 @@ public class UnitedParcelService implements IShipper {
   @Override
   public String outPutProducts() {
     String listOfItems = "";
-    listOfItems = listOfItems + product1.getDescription() + " [" + product1.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + product2.getDescription() + " [" + product2.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + product3.getDescription() + " [" + product3.getQty() + "]" + System.lineSeparator();
-    listOfItems = listOfItems + product4.getDescription() + " [" + product4.getQty() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product1.getDescription() + " [" + product1.getQuantity() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product2.getDescription() + " [" + product2.getQuantity() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product3.getDescription() + " [" + product3.getQuantity() + "]" + System.lineSeparator();
+    listOfItems = listOfItems + product4.getDescription() + " [" + product4.getQuantity() + "]" + System.lineSeparator();
 
     return listOfItems;
   }

@@ -1,14 +1,14 @@
 public class Product {
   private String id = null;
-  private int qty = 0;
+  private int quantity = 0;
   private String description = null;
-  private double weight_ounces = 0;
+  private double weightOunces = 0;
 
-  public Product(String id, int qty, String desc, double weight) {
+  public Product(String id, int quantity, String description, double weightOunces) {
     this.id = id;
-    this.qty = qty;
-    description = desc;
-    weight_ounces = weight;
+    this.quantity = quantity;
+    this.description = description;
+    this.weightOunces = weightOunces;
   }
 
   public String getId() {
@@ -28,19 +28,19 @@ public class Product {
   }
 
   public double getWeightOunces() {
-    return weight_ounces;
+    return weightOunces;
   }
 
   public void setWeightOunces(double weightOunces) {
-    this.weight_ounces = weightOunces;
+    this.weightOunces = weightOunces;
   }
 
-  public int getQty() {
-    return qty;
+  public int getQuantity() {
+    return quantity;
   }
 
-  public void setQty(int qty) {
-    this.qty = qty;
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
   }
 }
 
