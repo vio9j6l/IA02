@@ -3,7 +3,8 @@ import java.util.Scanner;
 enum ShipmentType
 {
   FEDEX,
-  UPS
+  UPS,
+  PLANTEX
 }
 
 public class Demo
@@ -21,6 +22,7 @@ public class Demo
     System.out.println("How do you want to ship your order?");
     System.out.println("1) FedEx");
     System.out.println("2) UPS");
+    System.out.println("3) Planet Express");
     String userInput = keyboard.nextLine();
     int choiceNum = Integer.parseInt(userInput);
     ShipmentType choice = ShipmentType.values()[choiceNum - 1];
@@ -28,6 +30,7 @@ public class Demo
     String shipperName = null;
     FederalExpress fedex = null;
     UnitedParcelService ups = null;
+    PlanetExpress plantEx = null;
     switch (choice) {
       case FEDEX:
         fedex = new FederalExpress();
@@ -39,6 +42,11 @@ public class Demo
         ups.addProducts(shipment);
         shipperName = ups.companyName();
         break;
+      case PLANTEX:
+        plantEx = new PlanetExpress();
+        plantEx.addProducts(shipment);
+        shipperName = plantEx.companyName();
+        break;
       default:
         System.out.println("Invalid choice");
     }
@@ -46,6 +54,7 @@ public class Demo
     System.out.println("Your shipment is being processed by " + shipperName);
     System.out.println("Items getting ready to ship:");
     String productList = null;
+    //String productList1 = null;
     switch (choice) {
       case FEDEX:
         productList = fedex.outPutProducts();
@@ -53,10 +62,15 @@ public class Demo
       case UPS:
         productList = ups.outPutProducts();
         break;
+      case PLANTEX:
+        productList = plantEx.outPutProducts();
+        StringBuilder stringBuilderReport = new StringBuilder();
+        break;
       default:
         throw new AssertionError();
     }
     System.out.println(productList);
+
   }
 
 }

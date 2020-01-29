@@ -12,6 +12,7 @@ public class FederalExpress implements IShipper
     for (Product item : shipment.getProducts()) {
       items.push(item);
       totalQuantity += item.getQuantity();
+
     }
   }
 
