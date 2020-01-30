@@ -14,7 +14,6 @@ public class PlanetExpress implements IShipper
       goods.add(good);
       totalQuantity += good.getQuantity();
       totalWeight += good.getWeightOunces();
-      //goods.addAll((Collection<? extends Product>) good);
     }
   }
 
@@ -23,18 +22,14 @@ public class PlanetExpress implements IShipper
     ArrayList<String> planetGoods = new ArrayList<String>();
     DecimalFormat df = new DecimalFormat("#.0");
     for (Product planetGood : goods){
-      //String quantity = Integer.toString(planetGood.getQuantity());
       planetGoods.add("[" + Integer.toString(planetGood.getQuantity()) + "] ");
-      //planetGoods.add(quantity);
       planetGoods.add(planetGood.getDescription());
       planetGoods.add(" (" + planetGood.getWeightOunces() + " oz)\n");
-      //planetGoods.add(System.lineSeparator());
     }
-    planetGoods.add("Total number of items: " + totalQuantity);
-    planetGoods.add("\nTotal weight of items: " + df.format(totalWeight));
-    //planetGoods.add(System.lineSeparator());
-    return planetGoods.toString().replaceAll("(^\\[|\\]$)", "").replaceAll(",", "");
-    //return planetGoods.toString().replaceAll("(^\\[|\\]$)" + ",", "");
+    planetGoods.add("Total number of items: " + "[" + totalQuantity + "]");
+    planetGoods.add("\n " + "Total weight of items: " + "(" + df.format(totalWeight) + " oz)");
+    return planetGoods.toString().replaceAll("(^\\[|\\]$)", " ").replaceAll(",", "");
+
   }
 
   @Override

@@ -52,7 +52,7 @@ public class Demo
     }
 
     System.out.println("Your shipment is being processed by " + shipperName);
-    System.out.println("Items getting ready to ship:");
+    System.out.println("Items getting ready to ship:\n");
     String productList = null;
     //String productList1 = null;
     switch (choice) {
@@ -64,7 +64,6 @@ public class Demo
         break;
       case PLANTEX:
         productList = plantEx.outPutProducts();
-        StringBuilder stringBuilderReport = new StringBuilder();
         break;
       default:
         throw new AssertionError();
