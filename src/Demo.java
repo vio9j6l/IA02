@@ -27,6 +27,7 @@ public class Demo
     int choiceNum = Integer.parseInt(userInput);
     ShipmentType choice = ShipmentType.values()[choiceNum - 1];
 
+    //Print out the company name based on the number being typed in
     String shipperName = null;
     FederalExpress fedex = null;
     UnitedParcelService ups = null;
@@ -51,10 +52,13 @@ public class Demo
         System.out.println("Invalid choice");
     }
 
+    /* Use outPutProducts method from each class to get products information
+     * and stored into the productList String variable
+     * Then print out the list based choice
+     */
     System.out.println("Your shipment is being processed by " + shipperName);
     System.out.println("Items getting ready to ship:\n");
     String productList = null;
-    //String productList1 = null;
     switch (choice) {
       case FEDEX:
         productList = fedex.outPutProducts();
